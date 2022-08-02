@@ -10,4 +10,8 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+To get this working you need to navigate to the project folder on your machine in a terminal window and then run the command `docker compose up`, once the text has stopped scrolling you'll know it's running (you can ignore yellow warning text).
+
+You can test if the backend is working by opening a browser window and going to http://localhost:3000/api/ping.
+
+You can test if the frontend is working by opening a browser window and going to http://localhost:3001/register and set up a user account.
