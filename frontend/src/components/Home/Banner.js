@@ -40,7 +40,7 @@ const Banner = (props) => {
         <img src={logo} alt="banner" />
         <div>
           <span id="get-part">A place to get</span>
-          <input id="search-box" onChange={(e) => onHandleChange(e.currentTarget.value)}></input>
+          <input id="search-box" type="search" onChange={(e) => onHandleChange(e.currentTarget.value)}></input>
           <span> the cool stuff.</span>
         </div>
       </div>
