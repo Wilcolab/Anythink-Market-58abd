@@ -9,8 +9,6 @@ import agent from "../../agent";
 
 const mapStateToProps = (state) => ({
   ...state.home,
-  appName: state.common.appName,
-  token: state.common.token,
 });
 
 const mapDispatchToProps = (dispatch) => ({
