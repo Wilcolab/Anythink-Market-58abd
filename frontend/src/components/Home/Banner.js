@@ -1,10 +1,7 @@
- import React from "react";
+import React from "react";
 import logo from "../../imgs/logo.png";
 import { connect } from "react-redux";
-import {
-  APPLY_TITLE_FILTER,
-  SET_PAGE
-} from "../../constants/actionTypes";
+import { APPLY_TITLE_FILTER, SET_PAGE } from "../../constants/actionTypes";
 import agent from "../../agent";
 
 const mapStateToProps = (state) => ({
@@ -19,18 +16,18 @@ const mapDispatchToProps = (dispatch) => ({
 
 const Banner = (props) => {
   const onHandleChange = (searchTerm) => {
-    if(searchTerm.length > 3) {
+    if (searchTerm.length > 3) {
       console.log(searchTerm);
       props.onSearchTitle(
         searchTerm,
         (page) => agent.Items.byTitle(searchTerm, page),
         agent.Items.byTitle(searchTerm)
-      )
+      );
     }
-    if(searchTerm.length === 0) {
+    if (searchTerm.length === 0) {
       props.onGetAll(0, agent.Items.all(0));
     }
-  }
+  };
 
   return (
     <div className="banner text-white">
@@ -38,7 +35,11 @@ const Banner = (props) => {
         <img src={logo} alt="banner" />
         <div>
           <span id="get-part">A place to get</span>
-          <input id="search-box" type="search" onChange={(e) => onHandleChange(e.currentTarget.value)}></input>
+          <input
+            id="search-box"
+            type="search"
+            onChange={(e) => onHandleChange(e.currentTarget.value)}
+          ></input>
           <span> the cool stuff.</span>
         </div>
       </div>
