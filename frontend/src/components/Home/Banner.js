@@ -36,7 +36,7 @@ const Banner = (props) => {
         <div>
           <span id="get-part">A place to get</span>
           <input
-            id="search-box"
+            id="sdfsdfg"
             type="search"
             onChange={(e) => onHandleChange(e.currentTarget.value)}
           ></input>
